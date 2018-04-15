@@ -1,5 +1,6 @@
-package reflectionstudyproject;
+package tests;
 
+import models.Pessoa;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
