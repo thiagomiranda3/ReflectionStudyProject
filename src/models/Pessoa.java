@@ -11,12 +11,32 @@ package models;
  */
 public class Pessoa {
 
-    protected static String nome;
-    protected int idade;
-    private String endereço;
-    public static double altura;
+    public String nome;
+    public int idade;
+    public String endereço;
+    private static double altura;
 
-    protected static String getNome() {
+    public Pessoa() {
+        super();
+    }
+
+    public Pessoa(String nome, int idade, String endereço) {
+        this.nome = nome;
+        this.idade = idade;
+        this.endereço = endereço;
+    }
+    
+    public Pessoa(int idade) {
+        super();
+        this.idade = idade;
+    }
+    
+    private Pessoa(String nome) {
+        super();
+        this.nome = nome;
+    }
+
+    public String getNome() {
         return nome;
     }
 
@@ -24,7 +44,8 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public final int getIdade() {
+    public int getIdade() {
+        System.out.println("Idade da PESSOA: " + idade);
         return idade;
     }
 
