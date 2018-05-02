@@ -5,13 +5,17 @@
  */
 package models;
 
+import annotations.PrimeiraAnnotation;
+
 /**
  *
  * @author wwthi
  */
 public class Pessoa {
 
+    @PrimeiraAnnotation
     public String nome;
+    @PrimeiraAnnotation(exemplo = "Metadado 1")
     public int idade;
     public String endereço;
     private static double altura;
@@ -36,6 +40,7 @@ public class Pessoa {
         this.nome = nome;
     }
 
+    @PrimeiraAnnotation(exemplo = "Metadado 2")
     public String getNome() {
         return nome;
     }
